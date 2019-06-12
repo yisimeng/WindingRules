@@ -88,12 +88,14 @@
     
     
      // 5. 开放式路径，奇偶缠绕规则
-     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(150, 150) radius:150 startAngle:M_PI endAngle:0 clockwise:NO];
-     [path addLineToPoint:CGPointMake(300, 0)];
-     [path addLineToPoint:CGPointMake(30, 300)];
-     [path addLineToPoint:CGPointMake(30, 150)];
-     [path addLineToPoint:CGPointMake(150, 225)];
-     [path addLineToPoint:CGPointMake(350, 150)];
+     UIBezierPath* path = [UIBezierPath bezierPath];
+    [path moveToPoint: CGPointMake(86.5, 379.09)];
+    [path addCurveToPoint: CGPointMake(238.67, 430.01) controlPoint1: CGPointMake(86.5, 379.09) controlPoint2: CGPointMake(197.85, 507.15)];
+    [path addCurveToPoint: CGPointMake(207.12, 328.17) controlPoint1: CGPointMake(279.5, 352.86) controlPoint2: CGPointMake(283.21, 210.91)];
+    [path addCurveToPoint: CGPointMake(123.62, 451.61) controlPoint1: CGPointMake(131.04, 445.44) controlPoint2: CGPointMake(131.04, 524.12)];
+    [path addCurveToPoint: CGPointMake(123.62, 379.09) controlPoint1: CGPointMake(116.19, 379.09) controlPoint2: CGPointMake(123.62, 379.09)];
+    [path addCurveToPoint: CGPointMake(207.12, 406.86) controlPoint1: CGPointMake(123.62, 379.09) controlPoint2: CGPointMake(134.75, 434.64)];
+    [path addCurveToPoint: CGPointMake(279.5, 379.09) controlPoint1: CGPointMake(279.5, 379.09) controlPoint2: CGPointMake(279.5, 379.09)];
      
      CAShapeLayer * shapeLayer = [CAShapeLayer layer];
      shapeLayer.path = path.CGPath;
